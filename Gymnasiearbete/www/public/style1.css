@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd; /* Light blue background */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Link */
+a {
+    color: #42a5f5; /* Bright blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1e88e5; /* Slightly darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    background-color: #bbdefb; /* Light blue for sections */
+    border: 2px solid #42a5f5; /* Blue border */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center all inline-block elements inside the section */
+}
+
+/* Post Styling */
+.post h1 {
+    color: #1e88e5; /* Slightly darker blue for titles */
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.post p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Buttons and Links */
+a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #42a5f5; /* Bright blue background */
+    color: #fff; /* White text */
+    border-radius: 4px;
+    margin: 8px 0; /* Remove auto centering */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Ensure text is centered inside the button */
+}
+
+a:hover {
+    background-color: #1e88e5; /* Slightly darker blue on hover */
+}
+
+/* Add this to align links to the left */
+body a {
+    margin-left: 16px; /* Add left margin to position links */
+}
+
+/* Divider */
+hr {
+    border: 0;
+    height: 1px;
+    background: #42a5f5; /* Blue divider */
+    margin: 16px 0;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #90caf9; /* Light blue background */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 16px; /* Add space below the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #42a5f5; /* Slightly darker blue on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 12px;
+        margin: 12px;
+    }
+
+    .post h1 {
+        font-size: 1.2em;
+    }
+
+    .post {
+        flex: 0 1 100%; /* Take up 100% of the row */
+    }
+}
+
+/* Individual post styling */
+.post {
+    background-color: #e3f2fd; /* Match the background color */
+    border: 2px solid #42a5f5; /* Blue border for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Add padding inside the post */
+    margin-bottom: 16px; /* Add space between posts */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    flex: 0 1 100%; /* Take up 100% of the row */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Center text in the middle of the screen */
+.center-text {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center-align the text */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Style for the form */
+form {
+    border: 2px solid #42a5f5; /* Blue border */
+    border-radius: 12px; /* Rounds the corners of the form */
+    padding: 16px; /* Add padding inside the form */
+    background-color: #e3f2fd; /* Light blue background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    max-width: 600px; /* Optional: Limit the form's width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Style for the "Skapa din förfrågan" text */
+form::before {
+    content: "Skapa din förfrågan";
+    display: block;
+    font-size: 24px; /* Make the text bigger */
+    color: #1e88e5; /* Slightly darker blue */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    margin-bottom: 16px; /* Add space below the text */
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="date"],
+input[type="password"],
+textarea {
+    border: 2px solid #42a5f5; /* Blue border */
+    border-radius: 8px; /* Rounds the corners of the input fields */
+    padding: 6px;
+    font-size: 14px; /* Adjust font size for readability */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    margin-bottom: 16px; /* Add space below each input field */
+}
+
+/* Add hover and focus effects for input fields */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #1e88e5; /* Slightly darker blue on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for the "Mina Förfrågningar" title */
+section h1 {
+    font-size: 28px;
+    color: #1e88e5; /* Slightly darker blue */
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Container for own requests */
+#own-requests {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    justify-content: space-around; /* Add space between items */
+    gap: 16px; /* Add spacing between rows and columns */
+}
+
+/* Individual post styling (reuse existing styles) */
+.own_request {
+    background-color: #e3f2fd; /* Match the background color */
+    border: 2px solid #42a5f5; /* Blue border for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Add padding inside the post */
+    margin-bottom: 16px; /* Add space between posts */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    flex: 0 1 calc(50% - 16px); /* Take up 50% of the row minus the gap */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
