@@ -52,7 +52,6 @@ if (isset($_POST['title'], $_POST['description'], $_POST['place'], $_POST['payme
             <br>
             <a href="read_request.php">Visa förfrågningar</a>
     <a href="own_requests.php">Mina förfrågningar</a>
-    <br>
     <a href="loggOut.php">Logga ut</a>
     
         </form>
