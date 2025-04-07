@@ -7,7 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<a href="write_request.php">Skapa en förfråga</a>
+<section class="section">
+    <h1>Förfrågningar</h1>
+<div class="flex-center">
+                <a href="write_request.php" class="btn btn-primary">Skapa en förfrågan</a>
+                <a href="loggOut.php" class="btn btn-outline">Logga ut</a>
+                <a href="own_requests.php" class="btn btn-primary">Mina förfrågningar</a>
+            </div>           
 <body>
 
 
@@ -61,10 +67,7 @@
             }
         }
 
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
+
     </script>
 </body>
 

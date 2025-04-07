@@ -16,11 +16,15 @@ $phone = isset($_GET['phone']) ? htmlspecialchars($_GET['phone']) : 'Okänt numm
     <title>Accepterad Request</title>
 </head>
 <body>
-    <h1>Tack för att du vill hjälpa mig!</h1>
-    <p>Vänligen kontakta <b><?php echo $username; ?></b> 
-    på numret <b><?php echo $phone; ?></b></p>
+
     
+    <h1>Tack för att du vill hjälpa mig!</h1>
+    <div class="crazy">
+    <h4>Vänligen kontakta <?php echo $username; ?> på numret: <a href="tel:<?php echo str_replace(['-', ' '], '', $phone); ?>"><?php echo $phone; ?></a></h4>
+</div>
     <br>
-    <a href="read_request.php">Tillbaka</a>
+    <div class="flex-center">
+                <a href="read_request.php" class="btn btn-primary">Tillbaka</a>
+            </div>    
 </body>
 </html>

@@ -1,9 +1,21 @@
 <?php
 session_start();
+include_once '../model/dbFunctions.php';
 
+//Signup
+if (isset($_POST['email'], $_POST['username'], $_POST['pwd'], $_POST['firstname'], $_POST['lastname'], $_POST['phone'])) {
+  $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+  $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+  $pwd = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
+  $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_SPECIAL_CHARS);
+  $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS);
+  $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
+
+  $result = addUser($email, $username, $pwd, $firstname, $lastname, $phone);
+}
 //login
 if (isset($_POST['pwd'], $_POST['username'])) {
-  include_once '../model/dbFunctions.php';
+  
   $user = filter_input(INPUT_POST, 'username', FILTER_UNSAFE_RAW);
   $pwd = $_POST['pwd'];
   $user = auth($user, $pwd);
@@ -24,18 +36,7 @@ if (isset($_POST['pwd'], $_POST['username'])) {
 
 
 }
-  //Signup
-  if (isset($_POST['email'], $_POST['username'], $_POST['pwd'], $_POST['firstname'], $_POST['lastname'], $_POST['phone'])) {
-    include_once '../model/dbFunctions.php';
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-    $pwd = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
-    $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_SPECIAL_CHARS);
-    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS);
-    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
-
-    $result = addUser($email, $username, $pwd, $firstname, $lastname, $phone);
-  }
+  
 ?>
 <head>
     <link rel="stylesheet" href="style.css">
