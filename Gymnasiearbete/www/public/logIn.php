@@ -40,6 +40,7 @@ if (isset($_POST['pwd'], $_POST['username'])) {
 ?>
 <head>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <section>
   <form method="post" action="logIn.php">
